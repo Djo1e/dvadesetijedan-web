@@ -14,6 +14,9 @@ export default function Index() {
         width={1920}
         height={720}
         layout="responsive"
+        unoptimized
+        priority
+        placeholder="blur"
         alt=""
       />
       <div className="px-8 pb-16 sm:px-20 lg:pb-20 lg:px-52">
@@ -106,24 +109,3 @@ export default function Index() {
     </main>
   );
 }
-
-// export async function getStaticProps() {
-//   const files = fs.readdirSync("posts");
-
-//   const posts = files.map((fileName) => {
-//     const slug = fileName.replace(".md", "");
-//     const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
-//     const { data: frontmatter } = matter(readFile);
-
-//     return {
-//       slug,
-//       frontmatter,
-//     };
-//   });
-
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }

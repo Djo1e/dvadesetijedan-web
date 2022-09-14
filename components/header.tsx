@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { routes } from "../utils/routes";
 import { BarcodeHeaderIcon } from "./icons/barcode-header";
 
 export function Header() {
@@ -7,7 +8,7 @@ export function Header() {
       <div className="flex items-center">
         <BarcodeHeaderIcon />
         <h1 className="ml-3 text-3xl lg:text-4xl">
-          <Link href="/">
+          <Link href={routes.home}>
             <a>DVADESETJEDAN</a>
           </Link>
         </h1>
@@ -19,12 +20,12 @@ export function Header() {
           </Link>
         </li>
         <li className="mr-8 text-xl font-medium lg:mr-20">
-          <Link href="/blog">
+          <Link href={routes.blog}>
             <a className="hover:text-purple">02. Blog</a>
           </Link>
         </li>
         <li className="text-xl font-medium">
-          <Link href="/community">
+          <Link href={routes.community}>
             <a className="hover:text-purple">03. Community</a>
           </Link>
         </li>

@@ -11,6 +11,8 @@ export default function Blog() {
           height={600}
           layout="responsive"
           alt=""
+          priority
+          placeholder="blur"
         />
         <div className="absolute z-10 text-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-[56px] leading-[70px]">Magic internet money</h1>

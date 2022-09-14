@@ -1,15 +1,9 @@
-import H5AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
 import ExportedImage from "next-image-export-optimizer";
 import { Episode } from "../utils/types";
 import { useRef, useState } from "react";
 import { PlayIcon } from "./icons/play";
 
-type Props = H5AudioPlayer["props"] & {
-  episode: Episode;
-};
-
-export function EpisodePlayer({ episode, ...otherProps }: Props) {
+export function EpisodePlayer({ episode }: { episode: Episode }) {
   const audioPlayer = useRef<any>();
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -46,11 +40,7 @@ export function EpisodePlayer({ episode, ...otherProps }: Props) {
           </button>
           <audio ref={audioPlayer} autoPlay={false} src={episode.enclosure.url} />
         </div>
-        <a
-          href={episode.enclosure.url}
-          // download
-          className="self-end text-xl text-purple"
-        >
+        <a href={episode.enclosure.url} className="self-end text-xl text-purple">
           Download
         </a>
       </div>
