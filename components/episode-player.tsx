@@ -1,7 +1,6 @@
 import H5AudioPlayer from "react-h5-audio-player";
-import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Episode } from "../utils/types";
 import { useRef, useState } from "react";
 import { PlayIcon } from "./icons/play";
@@ -27,7 +26,14 @@ export function EpisodePlayer({ episode, ...otherProps }: Props) {
   return (
     <div className="flex bg-dark brightness-110">
       <div className="hidden sm:block">
-        <Image src="/player.png" width={270} height={270} layout="fixed" objectFit="cover" alt="" />
+        <ExportedImage
+          src="/player.png"
+          width={270}
+          height={270}
+          layout="fixed"
+          objectFit="cover"
+          alt=""
+        />
       </div>
       <div className="flex justify-between w-full pl-4 pl-16 pr-4 md:pr-8 md:pl-8 py-7">
         <div>

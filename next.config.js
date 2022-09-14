@@ -1,5 +1,5 @@
 //next.config.js
-const debug = process.env.NODE_ENV !== "production";
+const dev = process.env.NODE_ENV !== "production";
 
 module.exports = {
   webpack: function (config) {
@@ -9,11 +9,18 @@ module.exports = {
     });
     return config;
   },
-  assetPrefix: !debug ? "./" : "",
+  assetPrefix: dev ? "" : "./",
   images: {
     domains: ["d3t3ozftmdmh3i.cloudfront.net"],
-    loader: "akamai",
-    unoptimized: true,
-    path: "",
+    loader: "custom",
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  },
+  env: {
+    nextImageExportOptimizer_imageFolderPath: "public",
+    nextImageExportOptimizer_exportFolderPath: "out",
+    nextImageExportOptimizer_quality: 75,
+    nextImageExportOptimizer_storePicturesInWEBP: true,
+    nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
 };

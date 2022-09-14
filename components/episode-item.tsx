@@ -1,4 +1,3 @@
-// import Image from "next/Image";
 import { useRouter } from "next/router";
 import { routes } from "../utils/routes";
 
@@ -22,7 +21,7 @@ export function EpisodeItem({ src, category, time, title, slug }: EpisodeItemPro
       </div>
       <div className="flex flex-col overflow-hidden">
         <p className="text-right">{time}</p>
-        <p className="text-right mt-4 ml-4 truncate">{title}</p>
+        <p className="mt-4 ml-4 text-right truncate">{title}</p>
       </div>
     </button>
   );

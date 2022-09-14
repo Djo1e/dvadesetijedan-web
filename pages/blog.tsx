@@ -1,11 +1,11 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { BlogPreview } from "../components/blog-preview";
 
 export default function Blog() {
   return (
     <main className="bg-dark">
       <div className="relative">
-        <Image
+        <ExportedImage
           src="/magic-internet-money.png"
           width={1440}
           height={600}

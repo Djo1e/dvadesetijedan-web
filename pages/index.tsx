@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { BlogPreview } from "../components/blog-preview";
 import { EpisodePlayer } from "../components/episode-player";
 import { MeetupPreview } from "../components/meetup-preview";
@@ -9,7 +9,13 @@ export default function Index() {
 
   return (
     <main className="bg-dark">
-      <Image src="/bitcoin-island.jpg" width={1920} height={720} layout="responsive" alt="" />
+      <ExportedImage
+        src="/bitcoin-island.jpg"
+        width={1920}
+        height={720}
+        layout="responsive"
+        alt=""
+      />
       <div className="px-8 pb-16 sm:px-20 lg:pb-20 lg:px-52">
         <div className="flex justify-center">
           <div className="text-center">
@@ -25,7 +31,13 @@ export default function Index() {
           </div>
         </div>
         <h2 className="text-6xl font-medium mb-14">Meetups</h2>
-        <Image src="/meetup-cover.png" width={1024} height={512} layout="responsive" alt="" />
+        <ExportedImage
+          src="/meetup-cover.png"
+          width={1024}
+          height={512}
+          layout="responsive"
+          alt=""
+        />
         <div className="w-5/6 m-auto">
           <p className="mt-16 text-2xl font-medium text-center">
             We currently have over 100 members and meet up regularly. The meetups are very easy
