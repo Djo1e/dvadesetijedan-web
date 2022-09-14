@@ -9,7 +9,7 @@ module.exports = {
     });
     return config;
   },
-  assetPrefix: dev ? "" : "./",
+  assetPrefix: "/dvadesetjedan-web",
   images: {
     domains: ["d3t3ozftmdmh3i.cloudfront.net"],
     loader: "custom",
@@ -17,7 +17,7 @@ module.exports = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
   env: {
-    nextImageExportOptimizer_imageFolderPath: "public",
+    nextImageExportOptimizer_imageFolderPath: "public/images",
     nextImageExportOptimizer_exportFolderPath: "out",
     nextImageExportOptimizer_quality: 75,
     nextImageExportOptimizer_storePicturesInWEBP: true,

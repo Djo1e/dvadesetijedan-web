@@ -12,7 +12,13 @@ export function BlogPreview({ title, author, translator }: BlogPreviewProps) {
   const router = useRouter();
   return (
     <div className="flex flex-col" onClick={() => router.push(routes.blog)}>
-      <ExportedImage src="/blog-preview.png" width={497} height={314} layout="responsive" alt="" />
+      <ExportedImage
+        src="images/blog-preview.png"
+        width={497}
+        height={314}
+        layout="responsive"
+        alt=""
+      />
       <div className="px-10 pt-12 pb-14 bg-dark brightness-110">
         <h1 className="text-2xl font-medium">{title}</h1>
         <p className="mt-4 text-lg text-gray">
@@ -34,7 +40,7 @@ export function SmallerBlogPreview({ title, author, translator }: BlogPreviewPro
   return (
     <div className="flex flex-col" onClick={() => router.push(routes.blog)}>
       <ExportedImage
-        src="/blog-preview.png"
+        src="images/blog-preview.png"
         width={360}
         height={250}
         layout="responsive"

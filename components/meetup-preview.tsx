@@ -11,7 +11,7 @@ export function MeetupPreview({
 }) {
   return (
     <div className="flex items-center">
-      <ExportedImage src="/meetup.png" width={180} height={180} layout="fixed" alt="" />
+      <ExportedImage src="images/meetup.png" width={180} height={180} layout="fixed" alt="" />
       <div className="ml-12">
         <p className="font-medium text-purple">{date}</p>
         {title && <p className="mt-2 text-2xl font-medium">{title}</p>}

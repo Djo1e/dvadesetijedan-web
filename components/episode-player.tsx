@@ -27,7 +27,7 @@ export function EpisodePlayer({ episode, ...otherProps }: Props) {
     <div className="flex bg-dark brightness-110">
       <div className="hidden sm:block">
         <ExportedImage
-          src="/player.png"
+          src="images/player.png"
           width={270}
           height={270}
           layout="fixed"

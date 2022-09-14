@@ -6,7 +6,7 @@ export default function Blog() {
     <main className="bg-dark">
       <div className="relative">
         <ExportedImage
-          src="/magic-internet-money.png"
+          src="images/magic-internet-money.png"
           width={1440}
           height={600}
           layout="responsive"

@@ -10,7 +10,7 @@ export default function Index() {
   return (
     <main className="bg-dark">
       <ExportedImage
-        src="/bitcoin-island.jpg"
+        src="images/bitcoin-island.jpg"
         width={1920}
         height={720}
         layout="responsive"
@@ -32,7 +32,7 @@ export default function Index() {
         </div>
         <h2 className="text-6xl font-medium mb-14">Meetups</h2>
         <ExportedImage
-          src="/meetup-cover.png"
+          src="images/meetup-cover.png"
           width={1024}
           height={512}
           layout="responsive"
