@@ -1,8 +1,10 @@
+const dev = process.env.NODE_ENV !== "production";
+
 export const routes = {
-  home: "/dvadesetjedan-web/",
-  blog: "/dvadesetjedan-web/blog",
-  community: "/dvadesetjedan-web/community",
-  podcast: "/dvadesetjedan-web/podcast",
+  home: dev ? "/" : "/dvadesetjedan-web/",
+  blog: dev ? "/blog" : "/dvadesetjedan-web/blog",
+  community: dev ? "/community" : "/dvadesetjedan-web/community",
+  podcast: dev ? "/podcast" : "/dvadesetjedan-web/podcast",
 } as const;
 
 export type Routes = keyof typeof routes;
