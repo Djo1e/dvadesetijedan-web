@@ -1,6 +1,7 @@
 import ExportedImage from "next-image-export-optimizer";
 import { BlogPreview } from "../components/blog-preview";
 import { EpisodePlayer } from "../components/episode-player";
+import { EpisodePreview } from "../components/episode-preview";
 import { BarcodeSectionIcon } from "../components/icons/barcode-section";
 import { MeetupPreview } from "../components/meetup-preview";
 import episodes from "../content/episodes.json";
@@ -84,18 +85,16 @@ export default function Index() {
           <BarcodeSectionIcon />
         </div>
         <EpisodePlayer episode={episode} />
-        <div className="px-24">
+        <div className="px-8 lg:px-14 xl:px-24">
           <div className="mt-8">
-            <MeetupPreview
+            <EpisodePreview
               date="Episode #20"
-              title=""
               location="Discussing the implications of hyperbitcoinization."
             />
           </div>
           <div className="mt-8">
-            <MeetupPreview
+            <EpisodePreview
               date="Episode #19"
-              title=""
               location="Why proof of work is essential to a new form of money."
             />
           </div>
