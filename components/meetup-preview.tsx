@@ -15,7 +15,7 @@ export function MeetupPreview({
       <div className="ml-12">
         <p className="font-medium text-purple">{date}</p>
         {title && <p className="mt-2 text-2xl font-medium">{title}</p>}
-        <p className="mt-2 text-gray">{location}</p>
+        <p className="mt-2 font-medium text-gray">{location}</p>
       </div>
     </div>
   );

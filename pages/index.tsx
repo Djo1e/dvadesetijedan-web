@@ -1,6 +1,7 @@
 import ExportedImage from "next-image-export-optimizer";
 import { BlogPreview } from "../components/blog-preview";
 import { EpisodePlayer } from "../components/episode-player";
+import { BarcodeSectionIcon } from "../components/icons/barcode-section";
 import { MeetupPreview } from "../components/meetup-preview";
 import episodes from "../content/episodes.json";
 
@@ -11,7 +12,7 @@ export default function Index() {
     <main className="bg-dark">
       <ExportedImage
         src="images/bitcoin-island.jpg"
-        width={1920}
+        width={1440}
         height={720}
         layout="responsive"
         unoptimized
@@ -22,10 +23,10 @@ export default function Index() {
       <div className="px-8 pb-16 sm:px-20 lg:pb-20 lg:px-52">
         <div className="flex justify-center">
           <div className="text-center">
-            <h1 className="text-[60px] lg:text-[80px] leading-[100px] mt-16 lg:mt-28">
+            <h1 className="text-[3.75rem] lg:text-[5rem] leading-[6.25rem] mt-16 lg:mt-28">
               Where ideas thrive
             </h1>
-            <p className="text-2xl mt-9">
+            <p className="text-2xl font-medium mt-9">
               DvadesetJedan is a local bitcoin community for Serbia, Croatia, Bosnia and Montenegro.
             </p>
             <button className="px-16 py-6 mb-32 text-xl font-medium uppercase sm:mb-40 mt-14 bg-gradient-to-r from-purpleGradient to-lightOrangeGradient">
@@ -33,7 +34,7 @@ export default function Index() {
             </button>
           </div>
         </div>
-        <h2 className="text-6xl font-medium mb-14">Meetups</h2>
+        <h2 className="text-[3.5rem] font-medium mb-14">Meetups</h2>
         <ExportedImage
           src="images/meetup-cover.png"
           width={1024}
@@ -49,13 +50,13 @@ export default function Index() {
           </p>
         </div>
         <div className="mt-24 md:px-10 xl:px-28">
-          <h3 className="text-[32px] mb-8">Next meetup</h3>
+          <h3 className="text-[2rem] font-medium mb-8">Next meetup</h3>
           <MeetupPreview
             date="Monday, August 16, 2022"
             title='Cafe "Zona Industriale"'
             location="Njegoševa 49, Beograd 11000, Serbia"
           />
-          <h3 className="text-[32px] mt-24 mb-8">Previous meetups</h3>
+          <h3 className="text-[2rem] font-medium mt-24 mb-8">Previous meetups</h3>
           <div className="mb-8">
             <MeetupPreview
               date="Monday, August 16, 2022"
@@ -78,7 +79,10 @@ export default function Index() {
             />
           </div>
         </div>
-        <h2 className="mt-40 mb-20 text-6xl font-medium">Latest podcast</h2>
+        <div className="flex items-center justify-between mt-40 mb-20">
+          <h2 className="text-[3.5rem] font-medium">Latest podcast</h2>
+          <BarcodeSectionIcon />
+        </div>
         <EpisodePlayer episode={episode} />
         <div className="px-24">
           <div className="mt-8">
@@ -96,7 +100,10 @@ export default function Index() {
             />
           </div>
         </div>
-        <h2 className="mt-48 mb-20 text-6xl font-medium">From the blog</h2>
+        <div className="flex items-center justify-between mt-48 mb-20">
+          <h2 className="text-[3.5rem] font-medium">From the blog</h2>
+          <BarcodeSectionIcon />
+        </div>
         <div className="flex flex-col md:flex-row">
           <div className="md:mr-8">
             <BlogPreview title="Inaliable Property Rights" author="Dergigi" translator="Pavlenex" />

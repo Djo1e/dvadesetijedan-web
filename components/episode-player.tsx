@@ -3,9 +3,18 @@ import { Episode } from "../utils/types";
 import { useRef, useState } from "react";
 import { PlayIcon } from "./icons/play";
 
+function download(dataurl, filename) {
+  const link = document.createElement("a");
+  link.href = dataurl;
+  link.download = filename;
+  link.click();
+}
+
 export function EpisodePlayer({ episode }: { episode: Episode }) {
   const audioPlayer = useRef<any>();
   const [isPlaying, setIsPlaying] = useState(false);
+
+  console.log(episode);
 
   function togglePlay() {
     setIsPlaying(!isPlaying);
@@ -40,7 +49,7 @@ export function EpisodePlayer({ episode }: { episode: Episode }) {
           </button>
           <audio ref={audioPlayer} autoPlay={false} src={episode.enclosure.url} />
         </div>
-        <a href={episode.enclosure.url} className="self-end text-xl text-purple">
+        <a href={episode.enclosure.url} download="test" className="self-end text-21 text-purple">
           Download
         </a>
       </div>

@@ -12,15 +12,18 @@ export function BlogPreview({ title, author, translator }: BlogPreviewProps) {
   const router = useRouter();
   return (
     <div className="flex flex-col" onClick={() => router.push(routes.blog)}>
-      <ExportedImage
-        src="images/blog-preview.png"
-        width={497}
-        height={314}
-        layout="responsive"
-        alt=""
-      />
+      <div className="relative">
+        <ExportedImage
+          src="images/blog-preview.png"
+          width={497}
+          height={314}
+          layout="responsive"
+          alt=""
+        />
+        <div className="absolute top-0 left-0 w-full h-full bg-[rgba(122,62,89,0.3)]" />
+      </div>
       <div className="px-10 pt-12 pb-14 bg-dark brightness-110">
-        <h1 className="text-2xl font-medium">{title}</h1>
+        <h1 className="text-[2rem] text-white font-medium">{title}</h1>
         <p className="mt-4 text-lg text-gray">
           Written by <span className="text-purple">{author}</span>, translated by{" "}
           <span className="text-purple">{translator}</span>
@@ -29,7 +32,7 @@ export function BlogPreview({ title, author, translator }: BlogPreviewProps) {
           It can’t be said often enough: Bitcoin is confusing. However, it’s not complicated like a
           Rube Goldberg machine is complicated.
         </p>
-        <button className="mt-8 text-purple">Continue...</button>
+        <button className="mt-8 text-lg text-purple">Continue...</button>
       </div>
     </div>
   );
@@ -46,8 +49,8 @@ export function SmallerBlogPreview({ title, author, translator }: BlogPreviewPro
         layout="responsive"
         alt="preview"
       />
-      <div className="pt-12 pb-14">
-        <h1 className="text-xl font-medium">{title}</h1>
+      <div className="mt-6">
+        <h1 className="font-medium text-21">{title}</h1>
         <p className="mt-4 text-sm text-gray">
           Written by <span className="text-purple">{author}</span>, translated by{" "}
           <span className="text-purple">{translator}</span>
