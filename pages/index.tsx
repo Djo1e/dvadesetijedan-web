@@ -1,14 +1,9 @@
 import ExportedImage from "next-image-export-optimizer";
-import { BlogPreview } from "../components/blog-preview";
-import { EpisodePlayer } from "../components/episode-player";
-import { EpisodePreview } from "../components/episode-preview";
-import { BarcodeSectionIcon } from "../components/icons/barcode-section";
-import { MeetupPreview } from "../components/meetup-preview";
-import episodes from "../content/episodes.json";
+import { BlogSection } from "../components/blog-section";
+import { MeetupsSection } from "../components/meetups-section";
+import { PodcastSection } from "../components/podcast-section";
 
 export default function Index() {
-  const [episode] = episodes;
-
   return (
     <main className="bg-dark">
       <ExportedImage
@@ -35,82 +30,9 @@ export default function Index() {
             </button>
           </div>
         </div>
-        <h2 className="text-[3.5rem] font-medium mb-14">Meetups</h2>
-        <ExportedImage
-          src="images/meetup-cover.png"
-          width={1024}
-          height={512}
-          layout="responsive"
-          alt=""
-        />
-        <div className="w-5/6 m-auto">
-          <p className="mt-16 text-2xl font-medium text-center">
-            We currently have over 100 members and meet up regularly. The meetups are very easy
-            going where we discuss bitcoin and other subjects. Everyone is welcome! All you have to
-            do is show up and be yourself.
-          </p>
-        </div>
-        <div className="mt-24 md:px-10 xl:px-28">
-          <h3 className="text-[2rem] font-medium mb-8">Next meetup</h3>
-          <MeetupPreview
-            date="Monday, August 16, 2022"
-            title='Cafe "Zona Industriale"'
-            location="Njegoševa 49, Beograd 11000, Serbia"
-          />
-          <h3 className="text-[2rem] font-medium mt-24 mb-8">Previous meetups</h3>
-          <div className="mb-8">
-            <MeetupPreview
-              date="Monday, August 16, 2022"
-              title="Kavantura"
-              location="Horvaćanska cesta 23a, 10000, Zagreb, Croatia"
-            />
-          </div>
-          <div className="mb-8">
-            <MeetupPreview
-              date="Monday, July 4, 2022"
-              title="Ovčice"
-              location="Put Firula 4, 21000, Split, Croatia"
-            />
-          </div>
-          <div className="mb-8">
-            <MeetupPreview
-              date="Monday, June 24, 2022"
-              title="Caffe Caffe"
-              location="Sveti Stefan, Montenegro"
-            />
-          </div>
-        </div>
-        <div className="flex items-center justify-between mt-40 mb-20">
-          <h2 className="text-[3.5rem] font-medium">Latest podcast</h2>
-          <BarcodeSectionIcon />
-        </div>
-        <EpisodePlayer episode={episode} />
-        <div className="px-8 lg:px-14 xl:px-24">
-          <div className="mt-8">
-            <EpisodePreview
-              date="Episode #20"
-              location="Discussing the implications of hyperbitcoinization."
-            />
-          </div>
-          <div className="mt-8">
-            <EpisodePreview
-              date="Episode #19"
-              location="Why proof of work is essential to a new form of money."
-            />
-          </div>
-        </div>
-        <div className="flex items-center justify-between mt-48 mb-20">
-          <h2 className="text-[3.5rem] font-medium">From the blog</h2>
-          <BarcodeSectionIcon />
-        </div>
-        <div className="flex flex-col md:flex-row">
-          <div className="md:mr-8">
-            <BlogPreview title="Inaliable Property Rights" author="Dergigi" translator="Pavlenex" />
-          </div>
-          <div className="mt-16 md:mt-0">
-            <BlogPreview title="Inaliable Property Rights" author="Dergigi" translator="Pavlenex" />
-          </div>
-        </div>
+        <MeetupsSection />
+        <PodcastSection />
+        <BlogSection />
       </div>
     </main>
   );

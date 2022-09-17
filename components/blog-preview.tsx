@@ -1,6 +1,4 @@
 import ExportedImage from "next-image-export-optimizer";
-import { useRouter } from "next/router";
-import { routes } from "../utils/routes";
 
 interface BlogPreviewProps {
   title: string;
@@ -9,9 +7,8 @@ interface BlogPreviewProps {
 }
 
 export function BlogPreview({ title, author, translator }: BlogPreviewProps) {
-  const router = useRouter();
   return (
-    <div className="flex flex-col" onClick={() => router.push(routes.blog)}>
+    <div className="flex flex-col">
       <div className="relative">
         <ExportedImage
           src="images/blog-preview.png"
@@ -39,9 +36,8 @@ export function BlogPreview({ title, author, translator }: BlogPreviewProps) {
 }
 
 export function SmallerBlogPreview({ title, author, translator }: BlogPreviewProps) {
-  const router = useRouter();
   return (
-    <div className="flex flex-col" onClick={() => router.push(routes.blog)}>
+    <div className="flex flex-col">
       <ExportedImage
         src="images/blog-preview.png"
         width={360}
